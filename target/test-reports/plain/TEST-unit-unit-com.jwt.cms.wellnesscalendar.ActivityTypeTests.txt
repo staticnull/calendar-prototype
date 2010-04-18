@@ -1,0 +1,10 @@
+Testsuite: com.jwt.cms.wellnesscalendar.ActivityTypeTests
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.06 sec
+------------- Standard Output ---------------
+--Output from testConstraints--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testConstraints--
+------------- ---------------- ---------------
+
+Testcase: testConstraints took 0.059 sec
