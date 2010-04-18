@@ -34,17 +34,16 @@ class PreviewCalendarController {
     def calendar = {
         // Generate month view YUI calendar from activites
         def idsString = params.ids
-        def month = params.month
-        def year = params.year
+        def month = params.month as int
+        def year = params.year as int
 
         def ids = idsString.split(";")
 
         def activityCategories = ids.collect { ActivityCategory.get(it) }
-        // Find activity(s) by above criteria
-//      def activities = Activity.findAllByActivityCategoryInList(activityCategories)
-        def activities = activityCategories.collect{ Activity.findAllByActivityCategory(it) }
+//TODO  def activities = Activity.findAllByActivityCategoryInList(activityCategories)
+        def activities = activityCategories.collect { Activity.findAllByActivityCategory(it) }
 
-        def startDate = new Date(Integer.parseInt(year), Integer.parseInt(month), 1)
+        def startDate = new Date(year, month, 1)
 
         def viewInfo = [:]
 
@@ -52,15 +51,19 @@ class PreviewCalendarController {
         def i = 0; // TODO temp
         activities.each() {
             def event = [:]
-            // TODO calc real date i.e. start date from activity
-            event.put("startDate", startDate + i)
-            event.put("endDate", startDate + i)
-            event.put("title", it ? it?.title : "blank" ) // TODO blank is temporary
+            if (it) {
+                // TODO calc real date i.e. start date from activity
+                event.put("startDate", startDate + i)
+                event.put("endDate", startDate + i)
+                event.put("title", it ? it?.title : "blank") // TODO blank is temporary
 
-            events.add(event)
+                events.add(event)
+            }
         }
 
         viewInfo.put("events", events)
+        viewInfo.put("month", month)
+        viewInfo.put("year", year)
 
         // Generate month view YUI calendar from activites
         return ["viewInfo": viewInfo]
@@ -74,7 +77,7 @@ class PreviewCalendarController {
         if (command.hasErrors()) {
             render(view: 'previewCalendar', model: [previewCalendar: command, viewInfo: getPreviewViewInfo()])
         } else {
-            def ids = command.activityCategories.collect{it.id}.join(";")
+            def ids = command.activityCategories.collect {it.id}.join(";")
             def month = command.month
             def year = command.year
 

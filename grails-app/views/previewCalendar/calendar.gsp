@@ -4,9 +4,9 @@
 	<!-- // TODO <meta name="layout" content="main"/>-->
 	<title>Preview Calendar</title>
 </head>
-<body onload="initTimeline();">
+<body>
 <div class="body">
-	<h1>Calendar</h1>
+	<h1>Calendar - ${viewInfo.month}/${viewInfo.year}</h1>
 	<ul>
 	<g:each var="events" in="${viewInfo.events}" status="i">
 		<li>
