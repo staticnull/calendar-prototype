@@ -35,7 +35,7 @@
 						<label for="month">Month:</label>
 					</td>
 					<td valign="top" class="value ${hasErrors(bean: previewCalendar, field: 'month', 'errors')}">
-						<g:select name="month" from="${viewInfo?.months}" value="${previewCalendar?.month}" optionKey="key" optionValue="value" noSelection="${['':'Select starting month ---']}"/>
+						<g:selectMonth name="month" value="${previewCalendar?.month}" noSelection="${['':'Select starting month ---']}"/>
 					</td>
 				</tr>
 
@@ -44,7 +44,7 @@
 						<label for="year">Year:</label>
 					</td>
 					<td valign="top" class="value ${hasErrors(bean: previewCalendar, field: 'year', 'errors')}">
-						<g:select name="year" from="${viewInfo?.years}" value="${previewCalendar?.year}" noSelection="${['':'Select starting year ---']}"/>
+						<g:select name="year" from="${Calendar.getInstance().get(Calendar.YEAR)..Calendar.getInstance().get(Calendar.YEAR) + 5}" value="${previewCalendar?.year}" noSelection="${['':'Select starting year ---']}"/>
 					</td>
 				</tr>
 

@@ -1,9 +1,10 @@
 package com.jwt.cms.wellnesscalendar
 
-import java.text.SimpleDateFormat
+import java.text.*
+import java.util.*
 
 class PreviewCalendarCommand {
-    List activityCategories
+    List activityCategories // TODO Seems to be need for assignets below.
     List ids
     String month
     String year
@@ -11,7 +12,7 @@ class PreviewCalendarCommand {
     static hasMany = [activityCategories: ActivityCategory]
 
     static constraints = {
-        // At least one id must be selected
+        // At least one id must be selected.
         ids(validator: {
             (it != null)
         })
@@ -32,38 +33,57 @@ class PreviewCalendarController {
     }
 
     def calendar = {
-        // Generate month view YUI calendar from activites
-        def idsString = params.ids
-        def month = params.month as int
-        def year = params.year as int
+        def idTokenString = params.ids
+        def startDate = params.startDate
 
-        def ids = idsString.split(";")
+        def ids = idTokenString.split(";")
 
-        def activityCategories = ids.collect { ActivityCategory.get(it) }
+        def activityCategories = []
+        ids.each {
+            def cat = ActivityCategory.findById(it)
+            if (cat) {
+                activityCategories.add(cat)
+            }
+        }
+
+//TODO  def activities = activityCategories.collect { Activity.findAllByActivityCategory(it) }
 //TODO  def activities = Activity.findAllByActivityCategoryInList(activityCategories)
-        def activities = activityCategories.collect { Activity.findAllByActivityCategory(it) }
 
-        def startDate = new Date(year, month, 1)
+        def activities = []
+        activityCategories.each {
+            def act = Activity.findAllByActivityCategory(it)
+            if (act) {
+                activities.add(act)
+            }
+        }
 
-        def viewInfo = [:]
+        activities = activities.flatten()
+
+        Date utilDate = null;
+        try {
+            utilDate = new SimpleDateFormat("MM/dd/yyyy").parse(startDate);
+        } catch (ParseException e) {
+            log e.toString()
+            log e.printStackTrace();
+        }
 
         def events = []
-        def i = 0; // TODO temp
         activities.each() {
             def event = [:]
             if (it) {
                 // TODO calc real date i.e. start date from activity
-                event.put("startDate", startDate + i)
-                event.put("endDate", startDate + i)
+                event.put("startDate", utilDate)
+                event.put("endDate", utilDate)
                 event.put("title", it ? it?.title : "blank") // TODO blank is temporary
+                event.put("description", it ? it?.title : "blank")
 
                 events.add(event)
             }
         }
 
+        def viewInfo = [:]
         viewInfo.put("events", events)
-        viewInfo.put("month", month)
-        viewInfo.put("year", year)
+        viewInfo.put("utilDate", utilDate)
 
         // Generate month view YUI calendar from activites
         return ["viewInfo": viewInfo]
@@ -78,27 +98,17 @@ class PreviewCalendarController {
             render(view: 'previewCalendar', model: [previewCalendar: command, viewInfo: getPreviewViewInfo()])
         } else {
             def ids = command.activityCategories.collect {it.id}.join(";")
-            def month = command.month
-            def year = command.year
+            def month = command.month as int
+            def year = command.year as int
+            def startDate = (month + 1) + "/01/" + year
 
-            redirect(action: "calendar", params: [ids: ids, month: month, year: year])
+            redirect(action: "calendar", params: [ids: ids, startDate: startDate])
         }
     }
 
     def getPreviewViewInfo() {
         def activityCategories = ActivityCategory.listOrderByTitle()
 
-        // TODO better way?
-        def monthIds = Calendar.JANUARY..Calendar.DECEMBER
-        def monthValues = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-        Map months = [:]
-        def i = 0;
-        monthIds.each {it ->
-            months.put(it, monthValues[i++])
-        }
-
-        def years = Calendar.getInstance().get(Calendar.YEAR)..Calendar.getInstance().get(Calendar.YEAR) + 5
-
-        return ["activityCategories": activityCategories, "months": months, "years": years]
+        return ["activityCategories": activityCategories]
     }
 }
