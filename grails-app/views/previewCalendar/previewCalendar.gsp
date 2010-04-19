@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<!-- // TODO <meta name="layout" content="main"/>-->
+	<meta name="layout" content="main"/>
 	<title>Preview Calendar</title>
 </head>
 <body>

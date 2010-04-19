@@ -3,13 +3,11 @@
 	<title>Welcome to Grails</title>
 	<meta name="layout" content="main"/>
 	<style type="text/css" media="screen">
-
 	#nav {
 		margin-top: 20px;
 		margin-left: 30px;
 		width: 228px;
 		float: left;
-
 	}
 
 	.homePagePanel * {

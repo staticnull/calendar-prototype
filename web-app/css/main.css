@@ -1,6 +1,5 @@
 html * {
-	margin: 0;
-	/*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+	margin: 0; /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
 }
 
 /* GENERAL */

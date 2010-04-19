@@ -46,9 +46,6 @@ class PreviewCalendarController {
             }
         }
 
-//TODO  def activities = activityCategories.collect { Activity.findAllByActivityCategory(it) }
-//TODO  def activities = Activity.findAllByActivityCategoryInList(activityCategories)
-
         def activities = []
         activityCategories.each {
             def act = Activity.findAllByActivityCategory(it)
@@ -58,6 +55,10 @@ class PreviewCalendarController {
         }
 
         activities = activities.flatten()
+
+        // TODO alternatives
+        def activities2 = activityCategories.collect { Activity.findAllByActivityCategory(it) }.flatten()
+        def activities3 = Activity.findAllByActivityCategoryInList(activityCategories).flatten()
 
         Date utilDate = null;
         try {
@@ -85,7 +86,7 @@ class PreviewCalendarController {
         viewInfo.put("events", events)
         viewInfo.put("utilDate", utilDate)
 
-        // Generate month view YUI calendar from activites
+        // Generate month view YUI calendar from activites.
         return ["viewInfo": viewInfo]
     }
 
@@ -97,7 +98,7 @@ class PreviewCalendarController {
         if (command.hasErrors()) {
             render(view: 'previewCalendar', model: [previewCalendar: command, viewInfo: getPreviewViewInfo()])
         } else {
-            def ids = command.activityCategories.collect {it.id}.join(";")
+            def ids = command.activityCategories.collect{it.id}.join(";")
             def month = command.month as int
             def year = command.year as int
             def startDate = (month + 1) + "/01/" + year
