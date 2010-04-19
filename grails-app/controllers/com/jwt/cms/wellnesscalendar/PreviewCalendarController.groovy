@@ -38,27 +38,9 @@ class PreviewCalendarController {
 
         def ids = idTokenString.split(";")
 
-        def activityCategories = []
-        ids.each {
-            def cat = ActivityCategory.findById(it)
-            if (cat) {
-                activityCategories.add(cat)
-            }
-        }
+        def activityCategories = ids.collect { ActivityCategory.findById(it) }
 
-        def activities = []
-        activityCategories.each {
-            def act = Activity.findAllByActivityCategory(it)
-            if (act) {
-                activities.add(act)
-            }
-        }
-
-        activities = activities.flatten()
-
-        // TODO alternatives
-        def activities2 = activityCategories.collect { Activity.findAllByActivityCategory(it) }.flatten()
-        def activities3 = Activity.findAllByActivityCategoryInList(activityCategories).flatten()
+        def activities = Activity.findAllByActivityCategoryInList(activityCategories).flatten()
 
         Date utilDate = null;
         try {
@@ -98,7 +80,7 @@ class PreviewCalendarController {
         if (command.hasErrors()) {
             render(view: 'previewCalendar', model: [previewCalendar: command, viewInfo: getPreviewViewInfo()])
         } else {
-            def ids = command.activityCategories.collect{it.id}.join(";")
+            def ids = command.activityCategories.collect {it.id}.join(";")
             def month = command.month as int
             def year = command.year as int
             def startDate = (month + 1) + "/01/" + year

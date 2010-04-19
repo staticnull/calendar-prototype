@@ -24,14 +24,8 @@
     <option name="SHOW_CLOSE_PROMPT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/main.css" afterPath="$PROJECT_DIR$/web-app/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/previewCalendar/previewCalendar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/previewCalendar/previewCalendar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/error.gsp" afterPath="$PROJECT_DIR$/grails-app/views/error.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/previewCalendar/calendar.gsp" afterPath="$PROJECT_DIR$/grails-app/views/previewCalendar/calendar.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+    <list default="true" name="Default" comment="&#10;# Brief commit desciption here&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wellness_calendar_2_0.iws" afterPath="$PROJECT_DIR$/wellness_calendar_2_0.iws" />
     </list>
     <list name="classes" comment="need to figure out how to remove these from git" />
@@ -53,20 +47,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy" line="62" class="Class at PreviewCalendarController.groovy:62" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy" line="71" class="Class at PreviewCalendarController.groovy:71" package="">
+      <breakpoint url="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy" line="44" class="Class at PreviewCalendarController.groovy:44" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -124,15 +105,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="previewCalendar.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/previewCalendar/previewCalendar.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="13" selection-start="2017" selection-end="2017" vertical-scroll-proportion="-9.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="calendar.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/previewCalendar/calendar.gsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,7 +117,16 @@
       <file leaf-file-name="PreviewCalendarController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.5290698">
+            <state line="44" column="0" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.18023255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/ActivityController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="6" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.6857143">
               <folding />
             </state>
           </provider>
@@ -567,7 +548,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Brief commit desciption here&#10;Code formatting clean-up.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Brief commit desciption here&#10;Cleaned up code formatting issues.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -584,6 +565,7 @@
     <MESSAGE value="# Brief commit desciption here&#10;Added a few taglibs.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
     <MESSAGE value="# Brief commit desciption here&#10;Added a few taglib methods.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
     <MESSAGE value="# Brief commit desciption here&#10;Code formatting clean-up.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
+    <MESSAGE value="# Brief commit desciption here&#10;Cleaned up code formatting issues.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -597,20 +579,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/jwt/cms/wellnesscalendar/UITagLib.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="58" selection-start="857" selection-end="857" vertical-scroll-proportion="-13.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/integration/com/jwt/cms/wellnesscalendar/UrlMappingTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -705,9 +673,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/ActivityCategoryController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/ActivityController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.6857143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/jwt/cms/wellnesscalendar/PreviewCalendarController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.5290698">
+        <state line="44" column="0" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.18023255">
           <folding />
         </state>
       </provider>
