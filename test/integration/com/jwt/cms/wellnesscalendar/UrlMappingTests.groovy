@@ -1,16 +1,14 @@
 package com.jwt.cms.wellnesscalendar
 
-import grails.test.*
-
-class UrlMappingTests extends GrailsUnitTestCase {
-    // TODO fix both throwing errors, were passing in previous projects
+// TODO asserts don't seem to be working within pacakage
+class UrlMappingsTests extends grails.test.GrailsUrlMappingsTestCase {
     void testPreviewCalendarPage() {
         assertUrlMapping("/", controller: 'previewCalendar', action: 'index')
         assertUrlMapping("/", controller: 'previewCalendar', action: 'previewCalendar')
         assertUrlMapping("/", controller: 'previewCalendar', action: 'previewCalendarSubmit')
     }
 
-    void testErrorPages() {
-        assertForwardUrlMapping(500, view: "error")
+    void testErrorMappings() {
+        assertUrlMapping(500, view: "error")
     }
   }

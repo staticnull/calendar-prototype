@@ -24,6 +24,7 @@ class BootStrap {
         def healthyEatingSeminarActivity = new Activity(title: "Healthy Eating Seminars", description: "Lorem ipsum dolor sit amet", activityCategory: healthyEatingCategory, activityType: onsiteActivityType).save()
         def wellnessEmailHealthyActivity = new Activity(title: "Welness Email About Healthy Eating", activityCategory: healthyEatingCategory, activityType: wellnessEmailType).save()
 
+        // TODO remove?
         if (healthyEatingSeminarActivity?.hasErrors()) {
             System.out.println "bootstrap activity errors =" + healthyEatingSeminarActivity.errors.allErrors[0].toString()
         } else {

@@ -32,44 +32,18 @@ class PreviewCalendarController {
         redirect(action: 'previewCalendar')
     }
 
+    def fullCalendar = {
+        def idTokenString = params.ids
+        def startDate = params.startDate
+
+        return getEventsViewInfo(idTokenString, startDate)
+    }
+
     def calendar = {
         def idTokenString = params.ids
         def startDate = params.startDate
 
-        def ids = idTokenString.split(";")
-
-        def activityCategories = ids.collect { ActivityCategory.findById(it) }
-
-        def activities = Activity.findAllByActivityCategoryInList(activityCategories).flatten()
-
-        Date utilDate = null;
-        try {
-            utilDate = new SimpleDateFormat("MM/dd/yyyy").parse(startDate);
-        } catch (ParseException e) {
-            log e.toString()
-            log e.printStackTrace();
-        }
-
-        def events = []
-        activities.each() {
-            def event = [:]
-            if (it) {
-                // TODO calc real date i.e. start date from activity
-                event.put("startDate", utilDate)
-                event.put("endDate", utilDate)
-                event.put("title", it ? it?.title : "blank") // TODO blank is temporary
-                event.put("description", it ? it?.title : "blank")
-
-                events.add(event)
-            }
-        }
-
-        def viewInfo = [:]
-        viewInfo.put("events", events)
-        viewInfo.put("utilDate", utilDate)
-
-        // Generate month view YUI calendar from activites.
-        return ["viewInfo": viewInfo]
+        return getEventsViewInfo(idTokenString, startDate)
     }
 
     def previewCalendar = {
@@ -89,9 +63,51 @@ class PreviewCalendarController {
         }
     }
 
+    def getEventsViewInfo(idTokenString, startDate) {
+        def ids = idTokenString.split(";")
+
+        def activityCategories = ids.collect { ActivityCategory.findById(it) }
+
+        def activities = Activity.findAllByActivityCategoryInList(activityCategories).flatten()
+
+        Date utilDate = parseDateString(startDate)
+
+        def events = []
+        activities.each() {
+            def event = [:]
+            if (it) {
+                // TODO calc real date i.e. start date from activity
+                event.put("startDate", utilDate)
+                event.put("endDate", utilDate)
+                event.put("title", it ? it?.title : "blank") // TODO blank is temporary
+                event.put("description", it ? it?.title : "blank")
+
+                events.add(event)
+            }
+        }
+
+        def viewInfo = [:]
+        viewInfo.put("events", events)
+        viewInfo.put("utilDate", utilDate)
+
+        return ["viewInfo": viewInfo]
+    }
+
     def getPreviewViewInfo() {
         def activityCategories = ActivityCategory.listOrderByTitle()
 
         return ["activityCategories": activityCategories]
+    }
+
+    def parseDateString(date) {
+        Date utilDate = null;
+        try {
+            utilDate = new SimpleDateFormat("MM/dd/yyyy").parse(date);
+        } catch (ParseException e) {
+            log e.toString()
+            log e.printStackTrace();
+        }
+
+        return utilDate
     }
 }
