@@ -1,0 +1,48 @@
+web-app/WEB-INF/tld/
+*.log
+target/
+classes/
+out/
+*.iml
+*.tmproj
+*.DS_Store
+.idea/
+
+# IDE support files
+/.classpath
+/.launch
+/.project
+/.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
+
+# default HSQL database files for production mode
+/prodDb.*
+
+# general HSQL database files
+*Db.properties
+*Db.script
+
+# logs
+/stacktrace.log
+/test/reports
+/logs
+
+# project release file
+/*.war
+
+# plugin release file
+/*.zip
+
+# older plugin install locations
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
+
+# "temporary" build files
+/target
+
+# other
+*.iws
