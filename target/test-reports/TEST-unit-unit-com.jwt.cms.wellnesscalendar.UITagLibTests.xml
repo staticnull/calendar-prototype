@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro.local" name="com.jwt.cms.wellnesscalendar.UITagLibTests" tests="1" time="0.083" timestamp="2010-04-17T22:10:45">
-  <properties />
-  <testcase classname="com.jwt.cms.wellnesscalendar.UITagLibTests" name="testSomething" time="0.083" />
-  <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-</testsuite>

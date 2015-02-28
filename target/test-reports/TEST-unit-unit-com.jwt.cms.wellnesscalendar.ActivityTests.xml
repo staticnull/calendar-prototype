@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro.local" name="com.jwt.cms.wellnesscalendar.ActivityTests" tests="1" time="0.117" timestamp="2010-04-17T22:10:44">
-  <properties />
-  <testcase classname="com.jwt.cms.wellnesscalendar.ActivityTests" name="testConstraints" time="0.117" />
-  <system-out><![CDATA[--Output from testConstraints--
-]]></system-out>
-  <system-err><![CDATA[--Output from testConstraints--
-]]></system-err>
-</testsuite>
