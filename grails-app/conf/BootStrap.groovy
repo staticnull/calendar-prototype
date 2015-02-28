@@ -1,4 +1,4 @@
-import com.jwt.cms.wellnesscalendar.*
+import cms.calendar.*
 
 class BootStrap {
     def init = {servletContext ->

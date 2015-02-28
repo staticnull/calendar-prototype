@@ -1,4 +1,4 @@
-package com.jwt.cms.wellnesscalendar
+package cms.calendar
 
 class ActivityTypeController {
     def scaffold = true

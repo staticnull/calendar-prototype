@@ -1,8 +1,8 @@
-package com.jwt.cms.wellnesscalendar
+package cms.calendar
 
 import grails.test.*
 
-class UITagLibTests extends TagLibUnitTestCase {
+class ActivityTypeControllerTests extends ControllerUnitTestCase {
     protected void setUp() {
         super.setUp()
     }

@@ -1,4 +1,4 @@
-package com.jwt.cms.wellnesscalendar
+package cms.calendar
 
 // TODO asserts don't seem to be working within pacakage
 class UrlMappingsTests extends grails.test.GrailsUrlMappingsTestCase {

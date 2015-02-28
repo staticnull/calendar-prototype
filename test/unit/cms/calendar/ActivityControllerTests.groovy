@@ -1,8 +1,8 @@
-package com.jwt.cms.wellnesscalendar
+package cms.calendar
 
 import grails.test.*
 
-class PreviewCalendarControllerTests extends ControllerUnitTestCase {
+class ActivityControllerTests extends ControllerUnitTestCase {
     protected void setUp() {
         super.setUp()
     }

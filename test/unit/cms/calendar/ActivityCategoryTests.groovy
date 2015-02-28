@@ -1,6 +1,7 @@
-package com.jwt.cms.wellnesscalendar
+package cms.calendar
 
 import grails.test.*
+import junit.framework.Assert
 
 class ActivityCategoryTests extends GrailsUnitTestCase {
     protected void setUp() {
@@ -16,14 +17,14 @@ class ActivityCategoryTests extends GrailsUnitTestCase {
         mockForConstraintsTests(ActivityCategory, [healthy])
 
         def testActivityCategory = new ActivityCategory()
-        assertFalse testActivityCategory.validate()
+        Assert.assertFalse testActivityCategory.validate()
         assertEquals "nullable", testActivityCategory.errors["title"]
 
         testActivityCategory = new ActivityCategory(title: "Healthy Eating")
-        assertFalse testActivityCategory.validate()
+        Assert.assertFalse testActivityCategory.validate()
         assertEquals "unique", testActivityCategory.errors["title"]
 
         testActivityCategory = new ActivityCategory(title: "Physical Health")
-        assertTrue testActivityCategory.validate()
+        Assert.assertTrue testActivityCategory.validate()
     }
 }
