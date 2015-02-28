@@ -24,8 +24,8 @@
     <option name="SHOW_CLOSE_PROMPT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eff65ffd-1842-47c1-a964-b520e59d2550" name="Default" comment="&#10;# Brief commit desciption here&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+    <list default="true" id="eff65ffd-1842-47c1-a964-b520e59d2550" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calendar_2_0.iws" afterPath="$PROJECT_DIR$/calendar_2_0.iws" />
     </list>
     <list id="ceb4eb9a-7765-4a71-ba2a-18299918a233" name="classes" comment="need to figure out how to remove these from git" />
     <ignored path=".idea/workspace.xml" />
@@ -397,6 +397,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Grails.Grails:calendar-prototype">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -729,12 +730,19 @@
       <option name="number" value="Default" />
       <updated>1425119930794</updated>
       <workItem from="1425119930511" duration="618000" />
-      <workItem from="1425120922462" duration="390000" />
+      <workItem from="1425120922462" duration="421000" />
     </task>
+    <task id="LOCAL-00001" summary="Add readme">
+      <created>1425121325593</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1425121325593</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1008000" />
+    <option name="totallyTimeSpent" value="1039000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -781,6 +789,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37150466" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -796,12 +805,19 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32650447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4087883" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37150466" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -817,7 +833,8 @@
     <MESSAGE value="# Brief commit desciption here&#10;Added a few taglib methods.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
     <MESSAGE value="# Brief commit desciption here&#10;Code formatting clean-up.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
     <MESSAGE value="# Brief commit desciption here&#10;Cleaned up code formatting issues.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Brief commit desciption here&#10;Cleaned up code formatting issues.&#10;&#10;# Full commit description here (comment lines starting with '#' will not be included)&#10;&#10;" />
+    <MESSAGE value="Add readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
